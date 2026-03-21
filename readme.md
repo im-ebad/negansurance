@@ -310,5 +310,5 @@ Fraud and pricing KPIs:
 This README captures the detailed idea document for current phase and should be
 maintained in this repository for upcoming phases.
 
-`Codeberg Repo Link: https://codeberg.org/priyanshoon/negansurance`
+`Github Repo Link: https://github.com/priyanshoon/negansurance`
 
