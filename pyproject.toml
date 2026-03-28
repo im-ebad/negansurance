@@ -1,0 +1,13 @@
+[project]
+name = "Negansurance"
+version = "0.1.0"
+description = "gig worker ka sahayak - devtrails hackathon"
+authors = [
+    { name = "Priyanshu Gupta", email = "priyanshoon@proton.me" },
+    { name = "Md Ebad" },
+    { name = "Divyanshu Kumar Verma" },
+]
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi[standard]>=0.135.2",
+]
