@@ -312,3 +312,12 @@ maintained in this repository for upcoming phases.
 
 `Github Repo Link: https://github.com/priyanshoon/negansurance`
 
+## 16) Local Development Environment
+
+- Install Nix and run `nix develop` to enter the project shell. It bootstraps the Python toolchain (python3, uv, ruff, basedpyright) and exposes the service helpers from `services-flake`.
+- Start the Postgres stack with `nix run` (or `nix run .#postgres-stack`). This launches a `process-compose` app that:
+  - starts `postgres` with an empty `negansurance` database ready for your own schema/data,
+  - exposes pgweb with its `PGWEB_DATABASE_URL` pointed at the running service,
+  - runs a simple connectivity check (`psql -h 127.0.0.1 -c 'SELECT current_database();' negansurance`).
+- Load your schema/data by connecting with `psql -h 127.0.0.1 negansurance` (or by dropping SQL files into pgweb).
+- Stop the services with `Ctrl+C`; process-compose will tear everything down.

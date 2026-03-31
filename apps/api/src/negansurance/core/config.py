@@ -27,7 +27,9 @@ class Settings(BaseModel):
     rate_limit_per_minute: int = Field(default=120)
     metrics_namespace: str = Field(default="negansurance_api")
     enable_https_redirect: bool = Field(default=False)
-    database_url: str = Field(default="postgresql://postgres:postgres@localhost:5432/postgres")
+    database_url: str = Field(
+        default="postgresql://postgres:postgres@localhost:5432/postgres"
+    )
 
     class Config:
         frozen = True
@@ -52,7 +54,9 @@ def _determine_database_url() -> str:
         )
         return template.format(password=supabase_password)
 
-    return "postgresql://postgres:postgres@localhost:5432/postgres"
+    # for local setup
+    # return "postgresql://{user_name}:{password}@localhost:5432/{database_name}"
+    return "postgresql://priyanshoon:postgres@localhost:5432/negansurance"
 
 
 def load_settings() -> Settings:
