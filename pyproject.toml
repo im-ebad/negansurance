@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "gig worker ka sahayak - devtrails hackathon"
 authors = [
     { name = "Priyanshu Gupta", email = "priyanshoon@proton.me" },
-    { name = "Md Ebad" },
+    { name = "Md Ebad" , email= "mdebad.it.aec@gmail.com" },
     { name = "Divyanshu Kumar Verma" },
 ]
 requires-python = ">=3.13"
@@ -13,4 +13,5 @@ dependencies = [
     "prometheus-client>=0.20.0",
     "asyncpg>=0.29.0",
     "pytest>=9.0.2",
+    "razorpay>=1.4.0",
 ]
